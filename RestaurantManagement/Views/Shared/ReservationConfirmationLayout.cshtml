@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Styles.Render("~/bundles/site")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "Index", "Home", routeValues: null, htmlAttributes: new { Href = "/Home/Index/#story" })</li>
+                    <li>@Html.ActionLink("Reservation", "Index", "Home", routeValues: null, htmlAttributes: new { Href = "/Home/Index/#reservation" })</li>
+                    <li>@Html.ActionLink("Map", "Index", "Home", routeValues: null, htmlAttributes: new { Href = "/Home/Index/#address" })</li>
+                    <li>@Html.ActionLink("Comment", "Index", "Home", routeValues: null, htmlAttributes: new { Href = "/Home/Index/#message" })</li>
+                    <li>@Html.ActionLink("Order", "Create", "OrderItems")</li>
+
+                    @*Uncomment to add Adminisrator*@
+                    @*<li>@Html.ActionLink("Role Manager", "Index", "Roles")</li>*@
+                    <li>@Html.ActionLink("Register Employee", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <section id="beer" class="description_content">
+        <div class="reservationConfirmation background_content">
+            <h1>Reservation Confirmation</h1>
+        </div>
+    </section>
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+   
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    @*<footer>
+
+        <div>
+
+            <p>&copy; @DateTime.Now.Year -Phanmembachkhoa.com</p>
+        </div>
+    </footer>*@
+</body>
+</html>
+
+

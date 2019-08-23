@@ -1,0 +1,56 @@
+﻿@model RestaurantManagement.Models.Reservation
+
+@{
+    ViewBag.Title = "ReservationConfirmation";
+    Layout = "~/Views/Shared/ReservationConfirmationLayout.cshtml";
+}
+
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumberOfGuests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReservationDate)
+        </th>
+    </tr>
+
+  
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.NumberOfGuests)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ReservationTime)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.ReservationDate)
+            </td>
+
+        </tr>
+    
+
+</table>
